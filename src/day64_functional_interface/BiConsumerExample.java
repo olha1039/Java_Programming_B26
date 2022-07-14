@@ -1,0 +1,36 @@
+package day64_functional_interface;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.BiConsumer;
+
+public class BiConsumerExample {
+    public static void main(String[] args) {
+
+        BiConsumer<String, Integer> printNTimes = (str, n) -> {
+            for (int i = 0; i < n; i++) {
+                System.out.print(str += " ");
+            }
+            System.out.println();
+        };
+
+        printNTimes.accept("java", 5);
+        printNTimes.accept("selenium", 7);
+
+        System.out.println();
+
+        // forEach() is a method defined in the map interface witch allows you to define the BiConsumer implementation you want to execute with the keys and values. Internally it uses a for each loop to iterate through the entry set
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("one", 1);
+        map.put("two", 2);
+        map.put("three", 3);
+        map.forEach((key, value) -> {
+            System.out.println(key + " " + value); // printing the key and the value
+        });
+
+        map.forEach((k, v) -> {
+            System.out.println(v + k.length()); // random logic to print, k plus length of the value
+        });
+    }
+}

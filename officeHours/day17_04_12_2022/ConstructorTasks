@@ -1,0 +1,58 @@
+Day17 --> Tuesday
+Day18 --> Wednesday
+
+Topics
+
+
+  -  Unit Assesment 3 Review   ( Wednesday )
+
+  -  Custom Class Intro  -
+            - Instance Variable VS Local Variable
+            - Instance Methods
+
+   - Constructors Intro
+            - No Arg Constr
+            - Parameterized Constr
+            - this vs this() keyword
+            - Constructors Overloading
+            - Constructors Chaining
+
+      Tasks :
+
+
+    ======= Task 1 ======= (Parameterized vs No Arg  Constructor |  Chaining | Overloading | This() )
+           className --- > Student
+           				instance variables:
+                    					name, age, batchNumber
+
+                    	1st constructor: initializes the name ONLY
+
+                    	2nd constructor: initializes name & age
+           							(MUST apply constructor Call)
+
+                    	3rd Constructor: initializes name, age ,batchNumber
+           							(MUST apply constructor Call)
+
+                    			instance methods: toString()
+
+     ======= Task 2 =======
+      	className --- > BankAccount   (instance vs Local  Var | instance Methods | Constr)
+
+              fields / attributes / data that can have are:
+                      1. AccountHolder, 2. AccountNumber, 3. Balance
+
+              Methods (Actions)
+                  1. CheckBalance,   2. deposit,  3. withdraw
+
+              requirements:
+                  1. user should be able to deposit money into their account --> deposit(double amount);
+                      1.1 if the amount is less than or equal to 0
+                               "Depositing amount can not be zero or negative"
+                  2. user should be able to withdraw money from their account --> withdraw(double amount);
+                      2.1 if the withdrawing account is greater than available balance
+                                "Insufficient balance "
+                      2.2 if the balance is less than or equal to 0, user should not be able to withdraw money
+                                "Withdrawing amount can not be negative or zero"
+                  3. user should be able to see their balance --> checkBalance();
+                      Example Output :
+                              As of today , "+$accountName+"'  available balance is: "+$availableBalance
